@@ -123,7 +123,7 @@ fi
 ORG=AndroidDumps #your GitHub org name
 EXTENSION=$(echo "${INPUT##*.}" | inline-detox)
 UNZIP_DIR=$(basename "${INPUT/.$EXTENSION/}" | sed 's/%[0-9A-Fa-f][0-9A-Fa-f]/_/g' | inline-detox)
-WORKING=${PWD}/working/${UNZIP_DIR}
+WORKING=${PWD}/working/${UNZIP_DIR}_
 
 # Delete previously dumped project
 if [[ -d "${WORKING}" ]]; then
